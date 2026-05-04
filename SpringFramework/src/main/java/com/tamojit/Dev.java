@@ -3,6 +3,7 @@ package com.tamojit;
 public class Dev {
     private int age;
     private Laptop laptop; // setter injection via spring.xml --> Autowired
+    private Computer comp; // Depending on Implemented Class directly
 
     public Dev() {
         System.out.println("Dev Constructor");
@@ -32,8 +33,19 @@ public class Dev {
         this.laptop = laptop;
     }
 
+    // Getter/Setter for Computer
+    public Computer getComp() {
+        return comp;
+    }
+
+    public void setComp(Computer comp) {
+        this.comp = comp;
+    }
+
     public void build() {
         System.out.println("Working on Spring Framework!");
         laptop.compile();
+
+        comp.compile();
     }
 }
