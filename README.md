@@ -8,3 +8,5 @@
 2. Setter Injection
 3. Field Injection
 - **Springboot**: Build on top of Spring framework to handle object creation configs, setting up servers (Apache Tomcat), etc. from its end, without having to explicitly handle all these configs bottom-up in raw Spring Framework. [NB: Java Springboot packages itself with a apache tomcat server out-of-the-box]
+- **SpringApplication.run()**: Creates a container for the project objects inside Springboot's IoC Container to be run by JVM.
+Container hierarchy: [JVM [IoC [Object of project]]]
