@@ -18,3 +18,5 @@ Container hierarchy: [JVM [IoC [Object of project]]]
   1. **Controller Layer**: Responsible for handling client requests & interfacing with HTTP routes [sending & receiving data].
   2. **Service Layer**: Responsible for handling all *business logic* behind the controllers (not involved with data transactions)
   3. **Model Layer**: Data models & ORMs.
+- **ORM**: *Object Relation Mapping* (ORM) maps a Java Object to a Relational table via a DB Query (like SQL Query).
+- **Spring Data JPA [Repository Layer]**: Handles Data & ORM operations in Spring Framework
