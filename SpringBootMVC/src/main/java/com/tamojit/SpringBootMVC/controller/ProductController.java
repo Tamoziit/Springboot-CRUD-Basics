@@ -14,7 +14,6 @@ public class ProductController {
 
     @GetMapping("/products") // GET Method
     public List<Product> getProducts() {
-        System.out.println("getProducts");
         return service.getProducts(); // getting products from Service layer
     }
 
@@ -26,5 +25,15 @@ public class ProductController {
     @PostMapping("/products/add") // POST method
     public void addProduct(@RequestBody Product product) { // accepting product obj as JSON (via springboot.jackson) as request body
         service.addProduct(product);
+    }
+
+    @PutMapping("/products/update")
+    public void updateProduct(@RequestBody Product product) {
+        service.updateProduct(product);
+    }
+
+    @DeleteMapping("/products/{id}")
+    public void deleteProduct(@PathVariable int id) {
+        service.deleteProduct(id);
     }
 }
